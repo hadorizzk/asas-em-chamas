@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asas em Chamas</title>
+<style>
+  body {
+    background-color: #fff;
+    color: #000;
+    font-family: sans-serif;
+    line-height: 1.7;
+    margin: 50px auto;
+    max-width: 700px;
+    padding: 0 15px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    margin-bottom: 15px;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+  }
+
+  button {
+    background: none;
+    border: 1px solid #000;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+
+  button:hover {
+    background-color: #000;
+    color: #fff;
+  }
+</style>
+</head>
+<body>
+
+<h1 id="titulo"></h1>
+<div id="conteudo"></div>
+
+<div class="buttons">
+  <button id="voltar">⬅ Voltar</button>
+  <button id="resumo">📖 Resumo</button>
+  <button id="proximo">Próximo ➡</button>
+</div>
+
+<script>
+const capitulos = [
+  {
+    titulo: "Capítulo 1 - A Liberdade Assusta",
+    texto: `
+      <p>A vida fora daquela casa era tudo que Júlia sempre quis...</p>
+      <p><strong>Asas em chamas.</strong> Era assim que ela se sentia. Queimando, mas voando.</p>
+    `
+  },
+  {
+    titulo: "Capítulo 2 - Pontes Queimam, Mas Algumas Dão Pra Reconstruir",
+    texto: `
+      <p>A mãe da Júlia parecia menor. Talvez o tempo tivesse feito isso...</p>
+      <p><strong>O passado tinha voltado.</strong> O mundo de Júlia estava prestes a desmoronar de novo.</p>
+    `
+  },
+  {
+    titulo: "Capítulo 3 - Sombras Que Não Morrem",
+    texto: `
+      <p>O envelope não saía da cabeça dela. Aquela frase martelava como um aviso...</p>
+      <p><strong>O passado não só tinha voltado. Ele estava ali. Agora.</strong></p>
+    `
+  },
+  {
+    titulo: "Capítulo 4 - O Homem da Janela",
+    texto: `
+      <p>O celular quase caiu da mão dela...</p>
+      <p><strong>Ela queria caçar.</strong></p>
+    `
+  },
+  {
+    titulo: "Capítulo 5 - O Escolhido",
+    texto: `
+      <p>O mundo de Júlia desmoronava em tempo real...</p>
+      <p><strong>O perseguidor queria jogar. E agora, ele tinha pego o que ela não pôde proteger.</strong></p>
+    `
+  },
+  {
+    titulo: "Capítulo 6 - O Jogo Vira",
+    texto: `
+      <p>Os dias seguintes foram um inferno...</p>
+      <p><strong>Dessa vez, ela estava pronta pra queimar tudo.</strong></p>
+    `
+  },
+  {
+    titulo: "Capítulo 7 - Irmã Contra Irmã",
+    texto: `
+      <p>O vento frio da noite bateu no rosto da Júlia...</p>
+      <p><strong>Porque agora… era irmã contra irmã.</strong></p>
+    `
+  },
+  {
+    titulo: "Resumo da História",
+    texto: `
+      <p><strong>Asas em Chamas</strong> acompanha a jornada de Júlia, uma jovem marcada por traumas do passado...</p>
+      <p>O livro mistura drama psicológico e suspense, mostrando como o passado pode renascer em chamas — mas também como é possível aprender a voar de novo.</p>
+    `
+  }
+];
+
+let paginaAtual = 0;
+
+function mostrarCapitulo() {
+  document.getElementById("titulo").innerText = capitulos[paginaAtual].titulo;
+  document.getElementById("conteudo").innerHTML = capitulos[paginaAtual].texto;
+}
+
+document.getElementById("proximo").addEventListener("click", () => {
+  if (paginaAtual < capitulos.length - 2) {
+    paginaAtual++;
+    mostrarCapitulo();
+  }
+});
+
+document.getElementById("voltar").addEventListener("click", () => {
+  if (paginaAtual > 0) {
+    paginaAtual--;
+    mostrarCapitulo();
+  }
+});
+
+document.getElementById("resumo").addEventListener("click", () => {
+  paginaAtual = capitulos.length - 1;
+  mostrarCapitulo();
+});
+
+mostrarCapitulo();
+</script>
+
+</body>
+</html>
