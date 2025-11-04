@@ -2,153 +2,409 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Asas em Chamas</title>
 <style>
-  body {
-    background-color: #fff;
-    color: #000;
+body {
+    background-color: white;
+    color: black;
     font-family: sans-serif;
-    line-height: 1.7;
-    margin: 50px auto;
-    max-width: 700px;
-    padding: 0 15px;
-  }
-
-  h1 {
-    text-align: center;
-  }
-
-  p {
-    margin-bottom: 15px;
-  }
-
-  strong {
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 80px;
+}
+.chapter, #resumo {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.7s;
+    pointer-events: none;
+    position: absolute;
+    width: 98vw;
+    max-width: 800px;
+    left: 0; right: 0; margin: 0 auto;
+}
+.chapter.active, #resumo.active {
+    display: block;
+    opacity: 1;
+    pointer-events: all;
+    position: relative;
+}
+.bold {
     font-weight: bold;
-  }
-
-  .buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-    border-top: 1px solid #ccc;
-    padding-top: 20px;
-  }
-
-  button {
-    background: none;
-    border: 1px solid #000;
-    padding: 8px 16px;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #eee;
+    padding: 10px;
+    text-align: center;
+    z-index: 2;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+}
+button {
+    margin: 0 5px;
+    padding: 7px 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background: #dadada;
     cursor: pointer;
-    font-size: 14px;
-    border-radius: 4px;
-  }
-
-  button:hover {
-    background-color: #000;
-    color: #fff;
-  }
+    transition: background 0.2s;
+}
+button:hover {
+    background: #bbb;
+}
+@media (max-width: 600px) {
+    body { padding: 8px; }
+    .chapter, #resumo {
+        width: 97vw;
+        padding-bottom: 70px;
+    }
+    .footer { font-size: 15px; }
+}
 </style>
 </head>
 <body>
-
-<h1 id="titulo"></h1>
-<div id="conteudo"></div>
-
-<div class="buttons">
-  <button id="voltar">⬅ Voltar</button>
-  <button id="resumo">📖 Resumo</button>
-  <button id="proximo">Próximo ➡</button>
+<div id="resumo" class="active">
+<h2>Resumo</h2>
+<!-- 🕯️ Resumo — “Asas em Chamas” (Capítulos 1 a 7)
+Júlia levava uma vida aparentemente normal até que começou a receber mensagens anônimas ameaçadoras. No início, achou que fosse uma brincadeira, mas as mensagens se tornaram cada vez mais pessoais — alguém a observava de perto, sabia onde ela morava, o que fazia, com quem estava.
+Com medo, ela contou a seus dois melhores amigos, Lucas e Camila, que tentaram ajudá-la a descobrir quem estava por trás disso. Mas o terror aumentou quando o perseguidor começou a invadir o apartamento dela, deixando bilhetes e fotos tiradas do lado de fora da janela — o que fez Júlia perceber que ele podia estar mais perto do que imaginava.
+Tentando fugir, ela se escondeu com a ajuda de Lucas, mas logo veio a pior parte: Camila desapareceu.
+Pouco depois, Júlia recebeu uma nova mensagem com um ultimato cruel:
+> “Escolha, Júlia. Lucas ou Camila? Você só pode salvar um.”
+Duas localizações apareceram na tela — e ela teve de escolher.
+Júlia foi atrás de Camila, salvando-a, mas descobriu tarde demais que Lucas havia sido capturado. Um vídeo mostrava ele ferido, com o perseguidor mascarado atrás e a frase escrita na parede:
+> “Eu nunca terminei o que comecei.”
+A partir daí, Júlia mudou. Deixou de ser a vítima e passou a caçar. Investigou, seguiu rastros, e acabou descobrindo que o perseguidor parecia estar ligado ao seu passado — alguém que conhecia detalhes íntimos da sua vida e da sua família. Um nome surgiu: Rafael, um conhecido antigo de sua família, mas ela logo percebeu que ele era só parte de algo maior.
+A tensão explodiu quando ela recebeu um novo bilhete junto de um objeto pessoal de Lucas — o chaveiro dele — e a mensagem:
+> “Está quente, Júlia. Às vezes, o monstro mora dentro da casa.”
+A dúvida começou a corroer tudo. Júlia passou a desconfiar até de Camila, sentindo que podia haver algo escondido.
+Pouco depois, ela perseguiu o perseguidor encapuzado pelas ruas, quase o alcançou, mas ele desapareceu deixando apenas uma última ameaça:
+> “Próxima jogada: você tem 24 horas. Ou o jogo termina.”
+Mas então veio a grande reviravolta.
+Uma nova mensagem, assinada com uma única palavra:
+> “irmã.”
+Júlia descobriu que havia algo errado com sua própria origem — documentos antigos mostravam que ela havia nascido com outro nome, Helena, e que era gêmea. A mulher que a criou pode não ser sua mãe biológica, e a verdadeira mãe, Vera, teve duas filhas.
+A conclusão era inevitável: o perseguidor podia ser sua irmã perdida.
+A última mensagem dizia:
+> “Encontre-me onde tudo começou.”
+E Júlia sabia exatamente o lugar — a casa antiga, onde seus piores pesadelos começaram.
+Determinada, ela decide ir sozinha, mesmo sabendo que pode não voltar. 
+-->
 </div>
-
+<div class="chapter" id="cap1">
+<h2>Capítulo 1</h2>
+<!-- Asas em Chamas  Capítulo 1 - A Liberdade Assusta
+A vida fora daquela casa era tudo que Júlia sempre quis. Mas, quando finalmente conseguiu, percebeu uma coisa que ninguém tinha avisado: liberdade às vezes dói.
+Agora, com 19 anos, ela tava morando sozinha num pequeno apartamento alugado com a ajuda do programa de acolhimento. Tinha um colchão no chão, um armário meio torto e uma cafeteira que fazia barulho de helicóptero quando ligava. Era pouco, mas era dela.
+O problema é que, quando a casa ficou vazia, o silêncio gritou. As lembranças que ela achou que tinha deixado pra trás, voltaram como se nunca tivessem ido. O cheiro do cinto de couro do pai, a voz fria da mãe dizendo que ela não era nada.
+Júlia se pegava, do nada, parada na porta de casa, com medo de entrar. Como se ainda fosse ouvir os passos pesados no corredor.
+Mas ela não tava mais lá.
+Ela era livre.
+Ela precisava acreditar nisso.
+Camila ainda fazia parte da vida dela. Melhor amiga, irmã de alma. Agora, as duas estudavam na mesma faculdade de Letras. Camila era aquela pessoa que conseguia fazer Júlia rir até nos dias em que ela só queria desaparecer. "A vida é uma bagunça, Ju, mas pelo menos a gente pode bagunçar juntas."
+Júlia seguia escrevendo. Seu blog agora tinha milhares de leitores. Pessoas que se encontravam nas palavras dela, que viam nas histórias dela uma parte da própria vida. Mas quanto mais ela se expunha, mais vinham os fantasmas. Ela se perguntava se tava pronta pra ser realmente vista.
+Um dia, Camila arrastou ela pra um sarau. — Ju, você precisa ouvir esse cara, ele escreve de um jeito que parece que tá falando com a gente. — E foi assim que ela conheceu Lucas.
+Lucas era diferente. Tinha um sorriso calmo, aqueles olhos que pareciam enxergar através das paredes que ela levantava. Ele não forçava conversa, mas toda vez que falava, fazia Júlia se sentir... segura. E isso era perigoso, porque ela nunca soube lidar com isso.
+Ela começou a gostar dele. E odiava isso.
+Gostar de alguém era abrir uma porta. E portas sempre trouxeram problemas pra ela.
+Ela se afastava, empurrava, sumia. Mas Lucas não desistia. Ele respeitava o tempo dela, esperava. Mandava mensagens leves, simples. Um "Oi, Ju. Espero que hoje tenha sido um dia bom." E, estranhamente, isso fazia ela querer responder.
+Mas, no fundo, Júlia sentia que ainda carregava cinzas demais nas asas. Tinha medo de se queimar de novo.
+O pior é que o passado nunca morre de verdade.
+Um dia, voltando da faculdade, Júlia viu uma figura sentada na pracinha perto do apartamento dela. Era a mãe.
+O coração dela afundou no peito. Depois de tantos anos sem se ver, por que agora? Por que aqui?
+A mãe levantou, deu um sorriso tímido.
+— Júlia... a gente precisa conversar.
+O mundo pareceu girar devagar.
+Ela poderia fugir. Ela poderia gritar. Ela poderia ignorar.
+Mas uma parte dela queria entender. Queria ouvir.
+Queria saber se, depois de tudo, ainda dava pra reconstruir alguma coisa ou se certas pontes estavam condenadas a ficar em ruínas.
+Ela respirou fundo. O vento frio da tarde bagunçou o cabelo dela, como se o universo quisesse lembrá-la de que ela podia escolher.
+E dessa vez, a escolha era dela.
+— Tudo bem, pode falar. — respondeu, com a voz firme e o coração acelerado.
+Asas em chamas. Era assim que ela se sentia.
+Queimando, mas voando.
+(continua...) -->
+</div>
+<div class="chapter" id="cap2">
+<h2>Capítulo 2</h2>
+<!-- Capítulo 2 - Pontes Queimam, Mas Algumas Dão Pra Reconstruir
+A mãe da Júlia parecia menor. Talvez o tempo tivesse feito isso. Ou talvez fosse porque, agora, Júlia tava de pé firme. Não era mais a menina que tremia com um olhar. Era uma mulher, mesmo que ainda com as costuras mal fechadas.
+— Eu sei que não tenho direito — a mãe começou, com a voz baixa — mas eu precisava te ver.
+Júlia ficou em silêncio. Deixou ela falar. O coração batia rápido, mas a cara dela era de pedra.
+— Eu errei muito, Júlia. Muito mesmo. Eu sabia de tudo, mas eu... eu me escondia. Eu me escondia atrás de desculpas, de medo, de orgulho. Eu... — Ela engoliu o choro, mas as lágrimas caíram mesmo assim — Eu fui covarde.
+Júlia queria gritar, queria perguntar onde essa mãe estava quando ela chorava sozinha no quarto, quando ela pedia por ajuda com os olhos. Mas as palavras ficaram presas.
+— Eu procurei ajuda — a mãe continuou — Faço terapia há dois anos. Eu precisava entender o quanto eu destruí a minha filha.
+O peito da Júlia apertou. Ela não sabia se acreditava. Parte dela queria virar as costas. Parte dela queria ouvir mais.
+— Eu não espero que você me perdoe. Eu só queria que você soubesse que você não é mais aquela menininha sozinha. Eu te acompanho, Ju. Li seu blog. Eu chorei em cada linha. Eu reconheci cada grito que não ouvi antes. Você se tornou uma mulher incrível, mesmo sem mim.
+Júlia piscou rápido pra segurar as lágrimas. Por muito tempo, ela quis ouvir isso. Mas agora que ouvia, doía.
+Ela precisava de tempo. Ela merecia tempo.
+— Eu não sei o que fazer com você aqui. Eu não sei nem se quero. — Júlia foi honesta. — Mas obrigada por dizer tudo isso.
+A mãe sorriu de leve, enxugando as lágrimas.
+— Eu vou esperar, o tempo que for.
+Ela se despediu e foi embora. Júlia ficou sentada na pracinha, o vento batendo no rosto, o coração bagunçado.
+Quando chegou em casa, Lucas tinha mandado mensagem.
+"Hoje foi um dia bom? Se quiser conversar, tô aqui."
+Ela sorriu, mesmo com os olhos cheios d'água. Escreveu:
+"Hoje foi estranho. Mas acho que foi importante. Amanhã te conto."
+O amanhã chegou, mas trouxe algo que Júlia nunca esperava.
+Na porta do apartamento, havia um envelope. Nenhum remetente. Apenas seu nome escrito com uma letra que ela conhecia muito bem.
+Era a letra do pai.
+O chão pareceu sumir debaixo dos pés dela. As mãos começaram a tremer. Ela olhou ao redor, o coração disparado. Quem tinha deixado aquilo ali? Ele? Ele tava por perto?
+Ela abriu o envelope com as mãos frias e dentro havia apenas uma frase, escrita em letras grandes e firmes:
+"Eu nunca terminei o que comecei."
+Asas em chamas. Queimando. Queimando.
+O passado tinha voltado.
+O mundo de Júlia estava prestes a desmoronar de novo.
+(continua no próximo capítulo...) -->
+</div>
+<div class="chapter" id="cap3">
+<h2>Capítulo 3</h2>
+<!-- Capítulo 3 - Sombras Que Não Morrem
+O envelope não saía da cabeça dela. Aquela frase martelava como um aviso de pesadelo: "Eu nunca terminei o que comecei."
+Júlia passou dias em alerta. Não conseguia dormir, mal conseguia comer. Começou a olhar por cima do ombro o tempo todo, a desconfiar de cada sombra, cada pessoa na rua.
+Camila insistia: — Ju, me deixa te ajudar, você não precisa passar por isso sozinha!
+Mas Júlia tinha medo. Medo de colocar as pessoas que amava em perigo.
+Ela tentou agir como se estivesse tudo bem, mas Lucas percebeu. Ele sempre percebia.
+— Júlia, o que aconteceu? Você tá sumida, tá diferente. Fala comigo.
+Ela hesitou, mas acabou mostrando o bilhete.
+Lucas ficou pálido. — Você tem ideia do que isso significa?
+Ela só balançou a cabeça, sem coragem de dizer em voz alta.
+Lucas começou a investigar. Vasculhou registros, tentou encontrar qualquer pista sobre o paradeiro do pai dela. Até que um dia ele apareceu no apartamento da Júlia com algo nas mãos. Uma foto antiga, amarelada.
+Era uma foto da Júlia criança, ao lado dos pais. Mas o detalhe que fez o estômago dela revirar foi a sombra de um homem ao fundo, parcialmente escondido, como se estivesse observando.
+— Quem é ele? — Lucas perguntou, apontando pra sombra.
+— Eu... eu não sei. — Mas, no fundo, Júlia sentiu um frio que parecia reconhecer aquela presença.
+Lucas entregou outro papel pra ela, um recorte de jornal.
+— Olha isso. — Era uma notícia antiga sobre desaparecimentos misteriosos. Todas as vítimas tinham algo em comum: eram mulheres que haviam denunciado abusos, e depois sumiram sem deixar rastros.
+— Ju... e se o seu pai nunca foi só ele? E se tinha alguém por trás? Alguém que continua agora?
+Júlia sentiu o mundo girar. O bilhete, a sombra na foto, as mulheres desaparecidas... tudo parecia se conectar.
+Ela sentiu uma notificação vibrar no celular. Era um número desconhecido. A mensagem dizia:
+"Você acha que pode fugir, Júlia? Eu sei onde você está. Estou mais perto do que você imagina."
+O pânico explodiu no peito dela.
+Antes que pudesse responder, outra mensagem chegou.
+Era uma foto.
+Uma foto tirada naquele exato momento.
+Dela.
+Do lado de fora da janela.
+Asas em chamas. O medo era um incêndio dentro dela. O passado não só tinha voltado. Ele estava ali. Agora.
+(continua no próximo capítulo...) -->
+</div>
+<div class="chapter" id="cap4">
+<h2>Capítulo 4</h2>
+<!-- Capítulo 4 - O Homem da Janela
+O celular quase caiu da mão dela. Júlia correu até a janela e abriu as cortinas com força, mas a rua parecia vazia. O coração dela batia tão forte que parecia que ia explodir.
+Ela ligou desesperada para Lucas. — Ele tá aqui. Ele tá me olhando. Ele mandou uma foto. AGORA. — A voz dela tremia.
+Lucas foi imediatamente para o apartamento dela.
+Quando chegou, encontraram mais um bilhete na porta.
+"Você pode correr, mas eu vou sempre te encontrar."
+— Ju, você precisa sair daqui agora. — Lucas pegou a mochila dela, puxando-a com urgência. — Vamos pra minha casa, vamos pra um lugar onde ele não possa te achar tão fácil.
+Júlia relutou, mas sabia que ficar era perigoso.
+Nos dias que seguiram, Lucas e Camila criaram um pequeno plano para tentar rastrear as mensagens, mas quem quer que fosse era bom demais em se esconder.
+E então, veio a pior notícia.
+Camila desapareceu.
+Ela simplesmente não apareceu na aula, não respondeu mensagens, não atendeu o celular. A polícia dizia que era cedo pra considerar um desaparecimento, mas Júlia sabia.
+Ela sabia que não era coincidência.
+Ela recebeu outra mensagem, sem nome, sem nada.
+"Escolha, Júlia. Lucas ou Camila? Você só pode salvar um."
+O sangue dela gelou. O desespero tomou conta.
+Na tela do celular, apareceram duas localizações diferentes.
+Duas armadilhas.
+Ela só podia escolher um caminho.
+E, no fundo, ela sabia: qualquer que fosse a escolha, ela nunca mais seria a mesma.
+Asas em chamas. Voando direto para o fogo.
+(continua no próximo capítulo...) -->
+</div>
+<div class="chapter" id="cap5">
+<h2>Capítulo 5</h2>
+<!-- Capítulo 5 - O Escolhido
+O mundo de Júlia desmoronava em tempo real. O celular tremia na mão dela. As duas localizações piscavam na tela como um relógio de contagem regressiva. Uma levando até Lucas. A outra até Camila.
+Ela gritou. Gritou tão forte que parecia que o próprio peito ia rasgar.
+Como ele podia fazer isso? Como podia obrigá-la a escolher? Era cruel, era insano.
+Ela ligou para o número que mandou as mensagens, mas só ouviu a respiração do outro lado. Pesada. Intencional. Depois, a ligação caiu.
+O tempo estava correndo.
+— Você precisa decidir. — Lucas falava do outro lado da linha, com a voz trêmula. — Me esquece, Ju. Salva a Camila.
+— Eu não posso perder você também! — Júlia gritava entre as lágrimas.
+— Por favor. Você precisa.
+Ela queria partir em dois. Queria ter o poder de se dividir. Mas a vida era cruel. O perseguidor era cruel.
+Ela olhou mais uma vez para o mapa.
+Ela escolheu.
+Correu. Correu como nunca antes. Sentia o ar queimando nos pulmões, as pernas falhando, mas ela não parava. Não podia parar.
+Ela chegou no endereço. Um galpão abandonado no meio da cidade.
+Arrombou a porta. Gritou.
+— CAMILA!
+Silêncio.
+Ela correu pelos corredores escuros, o som dos próprios passos ecoando.
+E então, viu. Camila, amarrada, assustada, mas viva.
+Ela correu até a amiga, começou a desamarrá-la.
+— Você veio... — Camila chorava.
+— É claro que eu vim. — Júlia tentava segurar as lágrimas.
+Mas no momento que desamarrou a última corda, ouviu um som.
+Um telefone tocando.
+Ela olhou ao redor, o som vinha de uma mochila no canto da sala.
+Ela atendeu.
+— Parabéns, Júlia. Você fez sua escolha. Agora veja o que perdeu.
+A ligação foi encerrada. E antes que pudesse reagir, o celular vibrou.
+Uma notificação.
+Um vídeo.
+Ela deu play.
+Lucas. Preso. Machucado. O rosto dele aparecia na tela, e atrás dele, o perseguidor. Mas o perseguidor usava uma máscara.
+O vídeo terminava com uma frase escrita na parede atrás de Lucas:
+"Eu nunca terminei o que comecei."
+As mãos de Júlia tremiam.
+Camila, ainda chorando, tentou puxá-la para fora.
+— Ju, precisamos sair daqui, agora!
+Mas Júlia não conseguia parar de olhar pro vídeo.
+Ela sabia que aquilo era só o começo.
+O perseguidor queria jogar.
+E agora, ele tinha pego o que ela não pôde proteger.
+Asas em chamas. Queimando mais do que nunca.
+E Júlia, pela primeira vez, não queria fugir.
+Ela queria caçar.
+(continua no próximo capítulo...) -->
+</div>
+<div class="chapter" id="cap6">
+<h2>Capítulo 6</h2>
+<!-- Capítulo 6 - O Jogo Vira
+Os dias seguintes foram um inferno.
+Júlia quase não dormia, quase não comia. A cada segundo, a imagem de Lucas preso voltava na cabeça dela como uma martelada. Ela se perguntava: onde ele estava? Ele estava bem? Ele ainda estava vivo?
+Mas o medo começou a se transformar em raiva. Uma raiva quente, viva. Pela primeira vez, ela percebeu: o perseguidor queria que ela se sentisse fraca, queria que ela fosse a presa. Mas e se ela invertesse o jogo? E se ela virasse o caçador?
+Camila, ainda abalada, quis protegê-la, mas Júlia estava decidida.
+Ela começou a investigar. Vasculhou mensagens antigas, fotos, lugares por onde passou. Foi em estações de trem, seguiu câmeras de segurança, falou com gente perigosa. Ela não era mais a garota assustada que fugia.
+Ela descobriu um padrão. O perseguidor sempre deixava pistas. Pequenos detalhes que ninguém perceberia, mas ela percebeu. E isso a levou a um nome: Rafael. Um antigo amigo da família, alguém que sumiu do mapa quando ela era pequena.
+Mas algo não fechava. O perseguidor era alguém próximo, alguém que sabia demais. Rafael fazia parte, mas não era tudo.
+E então, a bomba caiu.
+Ela recebeu um novo pacote.
+Dentro, havia um chaveiro. O mesmo que Lucas carregava desde o primeiro dia em que se conheceram. Junto, uma carta escrita à mão:
+"Está quente, Júlia. Você quase me achou. Sabe o que é divertido? Às vezes, o monstro mora dentro da casa."
+Júlia congelou.
+Ela olhou para Camila.
+Será?
+Mas não podia ser. Ou podia?
+O perseguidor estava brincando com a mente dela. Fazendo ela duvidar de todo mundo. Fazendo ela se sentir sozinha de novo.
+Ela saiu correndo, desesperada, tentando organizar os pensamentos.
+Foi quando viu, do outro lado da rua, a figura parada. O mesmo capuz. O mesmo olhar escondido. O perseguidor. Ali. Perto.
+Ela correu atrás.
+Subiu escadas, atravessou corredores, empurrou portas.
+Até que chegou num beco sem saída.
+Ela ouviu passos atrás dela. Devagar. Controlados.
+Quando se virou, ele estava lá.
+— Você corre bem, Júlia. Mas será que corre o bastante pra salvar quem você ama?
+Ela partiu pra cima dele. Mas ele era rápido, desapareceu numa curva.
+No chão, um novo bilhete:
+"Próxima jogada: você tem 24 horas. Ou o jogo termina."
+Júlia sentiu o coração bater mais forte. Ela sabia. O tempo estava acabando.
+Mas dessa vez…
+Ela estava pronta pra queimar tudo.
+(continua no próximo capítulo...) -->
+</div>
+<div class="chapter" id="cap7">
+<h2>Capítulo 7</h2>
+<!-- O vento frio da noite bateu no rosto da Júlia, mas o que fez o corpo dela estremecer de verdade foi aquela última palavra da mensagem: "irmã."
+Ela travou. Ficou parada olhando pro celular, com os olhos arregalados, como se as letras pudessem mudar. Como assim… irmã?
+Lucas se aproximou, notando o jeito que ela ficou pálida de repente.
+— Ju…? O que foi?
+Ela só estendeu o celular pra ele, ainda sem conseguir falar.
+Lucas leu a mensagem. O olhar dele escureceu.
+— Não... não pode ser.
+Júlia se virou de novo pra praia. A figura de capuz ainda estava lá, parada, de longe, observando. Mas antes que ela pudesse correr até lá, a pessoa simplesmente… sumiu. Como se o vento tivesse levado.
+O coração dela disparou. Tudo girava de novo.
+— Isso é algum tipo de brincadeira? — Camila perguntou, se aproximando com a testa franzida, percebendo o clima pesado.
+Júlia balançou a cabeça.
+— Não… isso é real.
+De volta ao apartamento, a paranoia voltava a tomar conta. Júlia trancava cada porta, conferia cada janela. Lucas mexia no notebook, tentando rastrear o número da mensagem. Camila fazia café pra tentar manter todo mundo acordado.
+— Eu revirei os documentos da sua infância, os registros sociais, tudo… — Lucas disse. — Não tem nada sobre outra filha.
+Júlia mordeu o lábio. A cabeça dela era um turbilhão.
+— Minha mãe... ela nunca falou de outra criança. Nunca.
+— Isso se for verdade que ela era sua mãe de verdade, né? — Camila soltou, meio sem pensar.
+Silêncio.
+Júlia encarou a amiga. Uma ideia horrível começou a crescer dentro dela.
+— E se... eu nem sei quem eu sou de verdade?
+Lucas parou o que estava fazendo.
+— Ju... a gente pode buscar documentos antigos… registros de maternidade, de hospitais, qualquer coisa.
+Camila puxou o laptop pra ela e começou a procurar também.
+Horas passaram. A madrugada chegou. E foi ali, no meio daquela busca louca, que Lucas encontrou.
+Um registro antigo, de um hospital da cidade. Uma criança nascida no mesmo dia que Júlia... mas com outro nome.
+"Helena."
+— Ju… olha isso. — Lucas apontou pra tela. — Essa... pode ser você.
+Ela congelou. Sentiu a garganta fechar.
+— Minha mãe me chamava de Júlia desde sempre…
+Camila leu o restante do documento.
+— Tem outro nome na certidão… o nome da mãe biológica. Não é o nome da sua mãe… é outro. Uma mulher chamada… Vera.
+Júlia levou as mãos à cabeça.
+— Isso tá ficando cada vez pior.
+Lucas respirou fundo.
+— Ju… tem mais uma coisa. Essa Vera… ela teve duas filhas. Gêmeas.
+Júlia sentiu um calafrio subir pelas costas.
+Camila arregalou os olhos.
+— Então… a pessoa da praia… a que mandou a mensagem… pode ser…
+— Minha irmã. — Júlia completou, com a voz embargada.
+Antes que pudessem fazer qualquer outra coisa, o celular de Júlia vibrou de novo.
+Nova mensagem.
+"Achei que você fosse me procurar antes… Mas tudo bem, vamos fazer do meu jeito. Encontre-me onde tudo começou."
+Júlia soube na hora o que isso significava.
+A casa antiga. Aquele lugar que ela jurou nunca mais pisar.
+O palco dos piores pesadelos dela.
+Ela levantou, com as mãos tremendo, mas os olhos firmes.
+— É lá que ela quer me ver. Então é pra lá que eu vou.
+Lucas segurou a mão dela.
+— Não vai sozinha.
+Júlia respirou fundo. Olhou pra ele e pra Camila.
+— Ninguém mais vai se machucar por minha causa.
+Ela pegou a chave do carro e saiu. Mas, no fundo… ela sabia que aquela noite... seria a mais perigosa de todas.
+Asas em chamas.
+Queimando mais forte do que nunca.
+Porque agora… era irmã contra irmã.
+-->
+</div>
+<div class="footer">
+<button onclick="showPrev()">⬅ Voltar</button>
+<button onclick="showResumo()">📖 Resumo</button>
+<button onclick="showNext()">Próximo ➡</button>
+</div>
 <script>
-const capitulos = [
-  {
-    titulo: "Capítulo 1 - A Liberdade Assusta",
-    texto: `
-      <p>A vida fora daquela casa era tudo que Júlia sempre quis...</p>
-      <p><strong>Asas em chamas.</strong> Era assim que ela se sentia. Queimando, mas voando.</p>
-    `
-  },
-  {
-    titulo: "Capítulo 2 - Pontes Queimam, Mas Algumas Dão Pra Reconstruir",
-    texto: `
-      <p>A mãe da Júlia parecia menor. Talvez o tempo tivesse feito isso...</p>
-      <p><strong>O passado tinha voltado.</strong> O mundo de Júlia estava prestes a desmoronar de novo.</p>
-    `
-  },
-  {
-    titulo: "Capítulo 3 - Sombras Que Não Morrem",
-    texto: `
-      <p>O envelope não saía da cabeça dela. Aquela frase martelava como um aviso...</p>
-      <p><strong>O passado não só tinha voltado. Ele estava ali. Agora.</strong></p>
-    `
-  },
-  {
-    titulo: "Capítulo 4 - O Homem da Janela",
-    texto: `
-      <p>O celular quase caiu da mão dela...</p>
-      <p><strong>Ela queria caçar.</strong></p>
-    `
-  },
-  {
-    titulo: "Capítulo 5 - O Escolhido",
-    texto: `
-      <p>O mundo de Júlia desmoronava em tempo real...</p>
-      <p><strong>O perseguidor queria jogar. E agora, ele tinha pego o que ela não pôde proteger.</strong></p>
-    `
-  },
-  {
-    titulo: "Capítulo 6 - O Jogo Vira",
-    texto: `
-      <p>Os dias seguintes foram um inferno...</p>
-      <p><strong>Dessa vez, ela estava pronta pra queimar tudo.</strong></p>
-    `
-  },
-  {
-    titulo: "Capítulo 7 - Irmã Contra Irmã",
-    texto: `
-      <p>O vento frio da noite bateu no rosto da Júlia...</p>
-      <p><strong>Porque agora… era irmã contra irmã.</strong></p>
-    `
-  },
-  {
-    titulo: "Resumo da História",
-    texto: `
-      <p><strong>Asas em Chamas</strong> acompanha a jornada de Júlia, uma jovem marcada por traumas do passado...</p>
-      <p>O livro mistura drama psicológico e suspense, mostrando como o passado pode renascer em chamas — mas também como é possível aprender a voar de novo.</p>
-    `
-  }
-];
-
-let paginaAtual = 0;
-
-function mostrarCapitulo() {
-  document.getElementById("titulo").innerText = capitulos[paginaAtual].titulo;
-  document.getElementById("conteudo").innerHTML = capitulos[paginaAtual].texto;
+let pages = ['resumo','cap1','cap2','cap3','cap4','cap5','cap6','cap7'];
+let current = 0;
+// Função auxiliar para animação fade
+function fadeTransition(outEl, inEl) {
+    if (outEl) {
+        outEl.classList.remove('active');
+        // Espera o transition do fade-out antes de mostrar o próximo
+        setTimeout(() => {
+            if (inEl) inEl.classList.add('active');
+        }, 320); // metade do transition para resposta rápida
+    } else if (inEl) {
+        inEl.classList.add('active');
+    }
 }
-
-document.getElementById("proximo").addEventListener("click", () => {
-  if (paginaAtual < capitulos.length - 2) {
-    paginaAtual++;
-    mostrarCapitulo();
-  }
+function showPage(index){
+    if(index === current) return;
+    let outEl = document.getElementById(pages[current]);
+    let inEl = document.getElementById(pages[index]);
+    fadeTransition(outEl, inEl);
+    current = index;
+}
+function showResumo(){
+    showPage(0);
+}
+function showNext(){
+    if(current < pages.length-1) showPage(current+1);
+}
+function showPrev(){
+    if(current > 0) showPage(current-1);
+}
+// Inicialização: só o Resumo visível
+document.addEventListener("DOMContentLoaded", () => {
+    pages.forEach((id, idx) => {
+        let el = document.getElementById(id);
+        if(idx === 0) el.classList.add('active');
+        else el.classList.remove('active');
+    });
 });
-
-document.getElementById("voltar").addEventListener("click", () => {
-  if (paginaAtual > 0) {
-    paginaAtual--;
-    mostrarCapitulo();
-  }
-});
-
-document.getElementById("resumo").addEventListener("click", () => {
-  paginaAtual = capitulos.length - 1;
-  mostrarCapitulo();
-});
-
-mostrarCapitulo();
 </script>
-
 </body>
 </html>
